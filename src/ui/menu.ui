@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>PCTool</class>
+ <widget class="QWidget" name="PCTool">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,7 +13,10 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="main">
+  <property name="styleSheet">
+   <string notr="true">border-radius: 20px;</string>
+  </property>
+  <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -36,10 +39,10 @@ background-color: rgb(38, 38, 38);</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>-10</y>
-     <width>231</width>
-     <height>811</height>
+     <x>-20</x>
+     <y>-70</y>
+     <width>311</width>
+     <height>941</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -48,6 +51,216 @@ background-color: rgb(72, 72, 72);</string>
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>251</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Eternal Logo</family>
+     <pointsize>30</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>PC TOOL</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="user">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>90</y>
+     <width>351</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat SemiBold</family>
+     <pointsize>25</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Привет!</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>150</y>
+     <width>561</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat SemiBold</family>
+     <pointsize>25</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Вот что умеет эта программа:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="frame1">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>280</y>
+     <width>254</width>
+     <height>400</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 20px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="frame2">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>280</y>
+     <width>501</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 20px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="frame3">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>500</y>
+     <width>501</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 20px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="button1">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>140</y>
+     <width>291</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat ExtraBold</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#button1 {
+    color: white;
+    background-color: black;
+    border-radius: 0px;
+    padding: 10px;
+} 
+
+#button1:hover {
+    
+	background-color: rgb(38, 38, 38);
+}</string>
+   </property>
+   <property name="text">
+    <string>Главная</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="button2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>190</y>
+     <width>291</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat ExtraBold</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#button2 {
+    color: white;
+    background-color: black;
+    border-radius: 0px;
+    padding: 10px;
+} 
+
+#button2:hover {
+    
+	background-color: rgb(38, 38, 38);
+}</string>
+   </property>
+   <property name="text">
+    <string>Мониторинг</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="button3">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>240</y>
+     <width>291</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat ExtraBold</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#button3 {
+    color: white;
+    background-color: black;
+    border-radius: 0px;
+    padding: 10px;
+} 
+
+#button3:hover {
+    
+	background-color: rgb(38, 38, 38);
+}</string>
+   </property>
+   <property name="text">
+    <string>Анализ дисков</string>
    </property>
   </widget>
  </widget>
