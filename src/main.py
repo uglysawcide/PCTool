@@ -1,12 +1,8 @@
 import sys
 from PyQt6.QtWidgets import QApplication
 
-from utils.db import Database
-
 from handlers.login import Login
 from handlers.menu import Menu
-
-db = Database("data/database.db")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

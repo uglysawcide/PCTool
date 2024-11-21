@@ -1,6 +1,8 @@
 import sqlite3
 import bcrypt
 
+salt = "fhaf!jg(%6394regGHUGTgs3029gfjhgG"
+
 class Database:
     def __init__(self, db_name: str):
         self.db_name = db_name
@@ -19,7 +21,7 @@ class Database:
             conn.commit()
 
     def new_user(self, login: str, password: str):
-        encrypted_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+        encrypted_password = bcrypt.hashpw(password.encode('utf-8'), salt)
         with sqlite3.connect(self.db_name) as conn:
             cursor = conn.cursor()
             cursor.execute('''
