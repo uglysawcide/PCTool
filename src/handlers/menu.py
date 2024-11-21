@@ -31,10 +31,8 @@ class Menu(QMainWindow):
         self.button2.clicked.connect(self.monitoring)
         self.button3.clicked.connect(self.analyze)
 
-        # Инициализация pynvml
         pynvml.nvmlInit()
 
-        # Создаем таймер для обновления данных каждую секунду
         self.timer = QTimer()
         self.timer.timeout.connect(self.update_stats)
 
@@ -70,7 +68,6 @@ class Menu(QMainWindow):
         except:
             pass
 
-        # Создаем QProgressBar и метки для отображения данных
         self.cpu_progress = QProgressBar(self)
         self.ram_progress = QProgressBar(self)
         self.gpu_progress = QProgressBar(self)
@@ -79,7 +76,6 @@ class Menu(QMainWindow):
         self.ram_label = QLabel("RAM: 0%", self)
         self.gpu_label = QLabel("GPU: 0%", self)
 
-        # Устанавливаем стили для QProgressBar и QLabel
         self.cpu_progress.setStyleSheet("""
             QProgressBar {
                 background-color: rgb(124, 113, 116);
@@ -147,7 +143,6 @@ class Menu(QMainWindow):
         self.ram_progress.setMaximum(100)
         self.gpu_progress.setMaximum(100)
 
-        # Устанавливаем координаты и размеры для QProgressBar и QLabel
         self.cpu_label.setGeometry(320, 290, 200, 20)
         self.cpu_progress.setGeometry(320, 310, 200, 15)
         self.ram_label.setGeometry(320, 330, 200, 20)
@@ -161,7 +156,6 @@ class Menu(QMainWindow):
         self.gpu_label.show()
         self.gpu_progress.show()
 
-        # Запускаем таймер для обновления данных
         self.timer.start(1000)
 
     def analyze(self):
@@ -181,17 +175,14 @@ class Menu(QMainWindow):
             pass
 
     def update_stats(self):
-        # Получаем данные о CPU
         cpu_percent = psutil.cpu_percent()
         self.cpu_label.setText(f"CPU: {cpu_percent}%")
         self.cpu_progress.setValue(int(cpu_percent))
 
-        # Получаем данные о RAM
         ram_percent = psutil.virtual_memory().percent
         self.ram_label.setText(f"RAM: {ram_percent}%")
         self.ram_progress.setValue(int(ram_percent))
 
-        # Получаем данные о GPU
         try:
             handle = pynvml.nvmlDeviceGetHandleByIndex(0)
             util = pynvml.nvmlDeviceGetUtilizationRates(handle)
